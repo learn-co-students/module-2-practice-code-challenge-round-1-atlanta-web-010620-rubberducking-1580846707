@@ -2,4 +2,11 @@
     Name: <%= f.text_field :name %>
     Description: <%= f.text_field :description %>
     <%= f.submit %>
+    <% if @duck.errors.any? %>
+    <ul>
+      <% @duck.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    <% end %>
 <% end %>
