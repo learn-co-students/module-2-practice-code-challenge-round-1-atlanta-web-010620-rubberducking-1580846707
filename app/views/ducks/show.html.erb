@@ -1,4 +1,4 @@
 <h1><%= @duck.name %></h1>
 <h2><%= " Description: #{@duck.description}" %></h2>
 <h1>Student:</h1>
-<%= @duck.student.name %>
+<%= link_to @duck.student.name, student_path(@duck.student) %>
